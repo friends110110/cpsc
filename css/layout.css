@@ -1,0 +1,286 @@
+/*----------------公共元素*/
+body{font-family: "Helvetica Neue", Arial, Helvetica, sans-serif; -webkit-touch-callout:none;-webkit-user-select:none; color:#616161; font-size:15px;}
+input{font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;}
+a{text-decoration:none;/* cursor: pointer; */}
+a,input{outline:none;}
+a:focus,input:focus{
+/*-webkit-tap-highlight-color:rgba(0,0,0,0);
+-webkit-user-modify:read-write-plaintext-only;*/
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+  margin:0;
+  padding:0
+}
+table {
+  border-collapse:collapse;
+  border-spacing:0
+}
+fieldset,img {
+  border:0
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+  font-style:normal;
+  font-weight:400
+}
+li {
+  list-style: none
+}
+caption,th {
+  text-align:left
+}
+h1,h2,h3,h4,h5,h6 {
+  font-size:100%;
+  font-weight:400
+}
+/*----------------浮动*/
+.cm-clear {
+zoom: 1;
+}
+.cm-left {
+display: inline;
+float: left;
+}
+.cm-right {
+display: inline;
+float: right;
+}
+
+.clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix::before, .clearfix::after {
+display: table;
+content: "";
+line-height: 0;
+}
+/*----------------横向列表*/
+ ul.listLateral li{float:left;list-style:none; display:inline-block;}
+ 
+ /*----------------iscroll滚动*/ 
+
+.wrapper{
+position:fixed;
+z-index:100;
+width:100%;
+left:0;
+top:0;
+} 
+.content {
+z-index: 1;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+width: 100%;
+padding-top:44px;
+}
+ 
+ /*----------------背景*/ 
+.bg-white{ background:#fff;}
+.bg-gray{ background:#f5f5f5;}
+
+
+
+/*----------------字体---------------*/
+.am-ft-xxxl{font-size:24px!important}
+.am-ft-xxl{font-size:20px!important}
+.am-ft-xl{font-size:18px!important}
+.am-ft-lg{font-size:16px!important}
+.am-ft-md{font-size:14px!important;}
+.am-ft-sm{font-size:12px!important;}
+.am-ft-ssm{font-size:10px!important;}
+.am-ft-bignNum{font-size:24px!important;}
+.am-ft-Num{ font-family:Arial}
+
+
+
+.am-lh-40{ line-height:40px;}
+.am-lh-36{ line-height:36px;}
+.am-lh-30{ line-height:30px;}
+.am-lh-24{ line-height:24px;}
+.am-lh-18{ line-height:18px;}
+
+.am-ft-main{color:#616161!important}
+.am-ft-white{color:#fff!important}
+.am-ft-black{color:#000!important}
+.am-ft-red{color:#e71718!important}
+.am-ft-gray{color:#999999!important}
+.am-ft-tabText{color:#666!important}
+.am-ft-instructions{color:#8f8f95!important}
+.am-ft-prompt{color:#ccc!important}
+.am-ft-green{color:#52b929!important}
+.am-ft-blue{color:#8abcff!important}
+.am-ft-yellow{color:#fff109!important}
+.am-ft-orange{color:#f65b07!important}
+.am-ft-blueDeep {
+color: #0966a8!important;
+}
+
+/*----------------按钮---------------*/
+.am-button {
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+display: inline-block;
+text-align: center;
+font-size: 14px;
+background-clip: padding-box;
+position: relative;
+text-decoration: none!important;
+vertical-align: middle;
+overflow: visible;
+}
+
+/*----------------布局---------------*/
+.am-flexbox{-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: left;
+    display: -webkit-box!important;
+    display: box!important;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;}
+.am-flexbox .am-flexbox-item{-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    box-flex: 1;
+    margin-left: 8px;
+    min-width: 20px;}
+.am-flexbox-item:first-child{margin-left:0}
+.am-flexbox-average .am-flexbox-item{width:100%}
+.am-flexbox-remind .am-flexbox-item{ margin-left:0;}
+
+.am-grid{-webkit-box-sizing:border-box;box-sizing:border-box;overflow:hidden}
+.am-grid-item{-webkit-box-sizing:border-box;box-sizing:border-box;float:left;display:inline-block;width:100%;vertical-align:top}
+.am-grid-item-20{width:20%}
+.am-grid-item-25{width:25%}
+.am-grid-item-30{width:30%}
+.am-grid-item-40{width:40%}
+.am-grid-item-60{width:60%}
+.am-grid-item-50{width:50%}
+.am-grid-item-75{width:75%}
+.am-grid-item-33{width:33.333%}
+.am-grid-item-66{width:66.666%}
+
+.am-ft-left{text-align:left!important ;}
+.am-ft-center{text-align:center!important}
+.am-ft-right{text-align:right!important;}
+
+.am-left-5{ padding-left:5px;}
+.am-left-10{ padding-left:10px;}
+.am-left-15{ padding-left:15px;}
+.am-left-20{ padding-left:20px;}
+.am-right-5{ padding-right:5px;}
+.am-right-10{ padding-right:10px;}
+.am-right-25{ padding-right:25px;}
+
+.am-pt-5{ padding-top:5px!important;}
+.am-pt-10{ padding-top:10px!important;}
+.am-pt-15{ padding-top:15px!important;}
+.am-pt-20{ padding-top:20px!important;}
+
+.am-mt-5{ margin-top:5px;}
+.am-mt-10{ margin-top:10px;}
+.am-mt-15{ margin-top:15px;}
+.am-mt-20{ margin-top:20px;}
+
+.am-pb-5{ padding-bottom:5px;}
+.am-pb-10{ padding-bottom:10px;}
+.am-pb-15{ padding-bottom:15px;}
+.am-pb-20{ padding-bottom:20px;}
+
+.con-spacing15{ padding:15px;}
+.con-spacing20{ padding:20px;}
+
+.p-text{ text-indent:18pt;}
+
+.linkLayout{display:block; position:relative;}
+
+
+/*----------------首页---------------*/
+.header{ height: 44px;}
+.logo{ width: 100px; height: 34px; margin:0 auto; padding-top: 5px;}
+/*.banner{ width: 100%; height: 132px; background:url("../images/banner.jpg") no-repeat; background-size: 100% 100%;}*/
+.banner{ width: 100%; height: 132px;position:relative;}
+.flex-viewport{width:100%;height:100%;overflow:hidden;}
+.flex-viewport ul{width:100%;height:100%;position:relative;}
+.flex-viewport li{
+    position:absolute;
+    top:0;
+    left:0;
+    float: left;
+    display: block;
+    width:100%;
+    height:100%;
+}
+.flex-viewport li a {
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+    overflow: hidden;
+}
+.flex-viewport li img{width:100%;height:100%;}
+
+@media screen and (min-width: 360px){
+    .banner{
+        height: 149px;
+    }
+}
+@media screen and (min-width: 400px){
+    .banner{
+        height: 165px;
+    }
+}
+.content{ padding: 12px 18px 0;}
+.blockButton{ width: 47%; height: 63px; color: #fff; font-size: 24px; line-height: 63px; text-align: center;}
+.blockButtoncg{ float: left; background: url("../images/blockButtoncg.png") no-repeat; background-size: 100% 100%;}
+.blockButtondx{ float: right; background: url("../images/blockButtondx.png") no-repeat; background-size: 100% 100%;}
+.whytitle{ margin-top: 20px; margin-bottom: 12px;}
+@media screen and (min-width: 360px){
+    .whytitle{
+        margin-top: 24px;
+        margin-bottom: 16px;
+    }
+}
+@media screen and (min-width: 400px){
+    .whytitle{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
+.whytitle .line{ display: block; float: left; width: 27%; height: 1px; margin-top: 8px; border-bottom: 1px dashed #b3b3b3;}
+.whytitle .title{ float: left; width: 46%; text-align: center; color: #808080; font-size: 12px;}
+@media screen and (min-width: 360px){
+    .whytitle .line{
+        width: 29%;
+    }
+    .whytitle .title{
+        width: 42%;
+    }
+}
+@media screen and (min-width: 400px){
+    .whytitle .line{
+        width: 30%;
+    }
+    .whytitle .title{
+        width: 40%;
+    }
+}
+.reasons .circle{ float: left; width: 30%; margin: 0 7px; text-align: center;}
+.reasons .ycircle{ margin-left: 0;}
+.reasons .bcircle{ margin-right: 0;}
+.reasons .circle .icon{ width: 70px; height: 70px; margin: 0 auto;}
+@media screen and (min-width: 360px){
+    .reasons .circle .icon{
+        width: 79px;
+        height: 79px;
+    }
+}
+@media screen and (min-width: 400px){
+    .reasons .circle .icon{
+        width: 88px;
+        height: 88px;
+    }
+}
+.reasons .ycircle .icon{ background: url("../images/ycircle.png") no-repeat; background-size: 100% 100%;}
+.reasons .rcircle .icon{ background: url("../images/rcircle.png") no-repeat; background-size: 100% 100%;}
+.reasons .bcircle .icon{ background: url("../images/bcircle.png") no-repeat; background-size: 100% 100%;}
+.reasons .circle .txt{ margin-top: 10px; font-size: 12px; color: #4c4c4c;}
+
+.footer{ position:fixed; width:100%; height: 42px; z-index:100; left:0; bottom:0; background: #e0e0e0;}
+.footer li{ float: left; text-align: center;}
+

@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+<link rel="stylesheet" type="text/css" href="css/layout.css"/>
+<!-- Link Swiper's CSS -->                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+<link rel="stylesheet" href="css/swiper.min.css">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    <!-- Demo styles -->                         
+<style>                                      
+    html ,body{                                 
+        position: relative;                      
+        height: 100%;                            
+    }                                            
+    body {                                       
+        background: #eee;                        
+        font-family: Helvetica Neue, Helvetica, A
+        font-size: 14px;                         
+        color:#000;                              
+        margin: 0;                               
+        padding: 0;     
+		overflow:hidden;                         
+    }                                            
+    .swiper-container {                          
+        width: 100%;                                         
+    }   
+                                            
+  .swiper-slide {                              
+        text-align: center;                      
+        font-size: 18px;                         
+        background: #fff;                        
+        /* Center slide text vertically */       
+        display: -webkit-box;                    
+        display: -ms-flexbox;                    
+        display: -webkit-flex;                   
+        display: flex;                           
+        -webkit-box-pack: center;                
+        -ms-flex-pack: center;                   
+        -webkit-justify-content: center;         
+        justify-content: center;                 
+        -webkit-box-align: center;               
+        -ms-flex-align: center;                  
+        -webkit-align-items: center;             
+        align-items: center;                     
+    }                                    
+} 
+/*                                     
+    @media screen and (min-width:400px){        
+ 		.swiper-container {                        
+        width: 100%;                        
+        height: 190px;                      
+    }                                       
+}                                           
+     */                          
+</style>                                     
+     
+<title>倍赚宝首页</title>
+<script type="text/javascript" src="js/jquery1.9.1.js""></script>
+ <!-- Swiper JS -->                            
+ <script src="js/swiper.js"></script>  
+
+<script type="text/javascript" src="js/iscroll.js"></script>
+<script type="text/javascript" src="js/hybrid-1.0.2.js"></script>
+<script type="text/javascript" src="js/plugins/WinnerFrame.js"></script>
+<script type="text/javascript">
+    var leverage={
+        leverageStock:function(){
+            window.plugins.winnerFrame.redirectTrade();
+        },
+        leverageNew:function(){
+            window.plugins.winnerFrame.redirectZijin();
+        }}
+		var  image;
+       	var swiper;
+        var imageRealWidth,imageRealHeight;
+        /*function aler(){
+       		//alert(".swiper-container  "+$(".swiper-container").width() +"  "+$(".swiper-container").height()+"计算后图片高度"+$(".swiper-container").width()/imageRealWidth*imageRealHeight);
+       		$(".swiper-container").css("height",$(".swiper-container").width()/imageRealWidth*imageRealHeight);                                                                                                                                                                                                             
+       		//alert("可见视口"+window.innerWidth+"浏览器可视窗口大小"+document.documentElement.clientWidth +" 屏幕宽度(空白空间) "+window.screen.availWidth+"当前屏幕宽度分辨率"+window.screen.width+ "返回当前网页宽度 "+window.document.body.offsetWidth+"图片 w   h"+imageRealWidth+" "+imageRealHeight+", swiper-container w h "+$(".swiper-container").width()+"  "+$(".swiper-container").height());			                                     
+       	}*/
+	  $(function(){    
+		imageRealWidth=localStorage['imageRealWidth'];
+       	imageRealHeight=localStorage["imageRealHeight"];
+       	function callSwiper(){
+         	//设置宽高
+         	//$(".swiper-container").css("width",localStorage['swipercontainerWidth']);
+        	//$(".swiper-container").css("height",localStorage['swipercontainerHeight']);
+        	//if($(".swiper-container").width()!=320){
+       		//$(".swiper-container").css("height",$(".swiper-container").width()/imageRealWidth*imageRealHeight);                                                                                                                                                                                                             
+       		//}
+    		swiper = new Swiper('.swiper-container', {                                                                                                                                                                             
+	        	pagination: '.swiper-pagination',                                                                                                                                                                                         
+	        	paginationClickable: true,                                                                                                                                                                                                
+	       	 	spaceBetween: 10,                                                                                                                                                                                                         
+	       		centeredSlides: true,                                                                                                                                                                                                     
+	        	autoplay: 2500,                                                                                                                                                                                                           
+	        	autoplayDisableOnInteraction: false,                                                                                                                                                                                    
+   			});
+			if(null!=localStorage['swipercontainerHeight']){   
+   			//$(".swiper-container").css("height",$(".swiper-container").width()/imageRealWidth*imageRealHeight);                                                                                                                                                                                                             
+       		$(".swiper-container").css("height",localStorage['swipercontainerHeight']);                                                                                                                                                                                                             
+			//alert("可见视口"+window.innerWidth+"浏览器可视窗口大小"+document.documentElement.clientWidth +" 屏幕宽度(空白空间) "+window.screen.availWidth+"当前屏幕宽度分辨率"+window.screen.width+ "返回当前网页宽度 "+window.document.body.offsetWidth+"图片 w   h"+imageRealWidth+" "+imageRealHeight+", swiper-container w h "+$(".swiper-container").width()+"  "+$(".swiper-container").height());			                                     
+        	}
+		}
+       	if(imageRealWidth==null||imageRealHeight==null){
+        	image=new Image();
+        	image.src="images/banner01.png";
+        	image.onload=function(){
+        		imageRealWidth=this.width;
+        		imageRealHeight=this.height;
+        		localStorage['imageRealWidth']= imageRealWidth; // 存储 cookie 
+        		localStorage['imageRealHeight']= imageRealHeight; // 存储 cookie
+        		//存储 container控件宽高
+        		//localStorage['swipercontainerWidth']=$(".swiper-container").width();
+        		//localStorage['swipercontainerHeight']=$(".swiper-container").height();
+        		callSwiper(); 
+       		 };    	
+         	delete image;
+         	}else{
+         		callSwiper();
+        	}
+		if(null==localStorage['swipercontainerHeight']){
+			setTimeout(function(){
+   				$(".swiper-container").css("height",$(".swiper-container").width()/imageRealWidth*imageRealHeight);                                                                                                                                                                                                             
+				localStorage['swipercontainerHeight']=$(".swiper-container").width()/imageRealWidth*imageRealHeight;
+			},400);
+		}
+       })                                                                                                                                                                                                                        
+</script>
+
+</head>
+
+<body>
+<article class="header">
+    <div class="logo"><img src="images/logo.png" width="100" height="34" alt="倍赚宝"/> </div>
+</article>
+<!--
+<div class="banner">
+    <div class="flex-viewport">
+        <!-- 改变 -webkit-transform: translate3d(-100px, 0px, 0px), 改变位置
+        <ul class="slides" style="-webkit-transform: translate3d(0px, 0px, 0px);">
+            <li style="left:0;"><a><img src="images/banner01.png"/></a></li>
+            <li style="left:100%;"><a><img src="images/banner02.png"/></a></li>
+            <li style="left:200%;"><a><img src="images/banner03.png"/></a></li>
+        </ul>
+    </div>
+</div>
+
+-->
+    <!-- Swiper -->                                                                                                                              
+    <div class="swiper-container">                                                                                                               
+        <div class="swiper-wrapper">                                                                                                             
+            <div class="swiper-slide" style="background:url('images/banner01.png');background-repeat:no-repeat;background-size:100%;"></div>   
+            <div class="swiper-slide" style="background:url('images/banner02.png');background-repeat:no-repeat;background-size:100%;"></div>   
+            <div class="swiper-slide" style="background:url('images/banner03.png');background-repeat:no-repeat;background-size:100%;"></div>   
+        </div>                                                                                                                                   
+        <!-- Add Pagination -->                                                                                                                  
+        <div class="swiper-pagination"></div>                                                                                                    
+                                                                                                                                                 
+    </div>                                                                                                                                       
+
+<article class="content am-grid">
+    <div class="clearfix">
+        <div class="blockButton blockButtoncg" onclick="leverage.leverageStock()">杠杆炒股</div>
+        <div class="blockButton blockButtondx" onclick="leverage.leverageNew()">杠杆打新</div>
+    </div>
+    <p class="whytitle clearfix">
+        <span class="line"></span>
+        <span class="title">为什么选择倍赚宝？</span>
+        <span class="line"></span>
+    </p>
+    <aside class="reasons clearfix">
+        <div class="circle ycircle am-grid-item">
+            <div class="icon"></div>
+            <div class="txt">最高1.8倍杠杆</div>
+        </div>
+        <div class="circle rcircle am-grid-item">
+            <div class="icon"></div>
+
+            <div class="txt">佣金万2.5起</div>
+        </div>
+        <div class="circle bcircle am-grid-item">
+            <div class="icon"></div>
+            <div class="txt">8折利率优惠</div>
+        </div>
+    </aside>
+</article>
+
+</body>
+</html>
